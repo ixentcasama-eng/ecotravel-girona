@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoTravel - Contacte</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">EcoTravel 🌿</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Inici</a></li>
+          <li><a href="rutes.html">Rutes i Preus</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="equip.html">L'Equip</a></li>
+          <li><a href="contacte.html" class="actiu">Contacte</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container">
+      <h2>Contacta amb nosaltres</h2>
+      <div class="form-wrapper">
+        <form action="#" method="post">
+          <label for="nom">Nom:</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            required
+            placeholder="El teu nom"
+          />
+
+          <label for="telefon">Telèfon:</label>
+          <input
+            type="tel"
+            id="telefon"
+            name="telefon"
+            pattern="[0-9]{9}"
+            placeholder="666555444"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="correu@exemple.com"
+          />
+
+          <label for="missatge">Missatge:</label>
+          <textarea id="missatge" name="missatge" rows="5"></textarea>
+
+          <button type="submit" class="btn">Enviar Missatge</button>
+        </form>
+      </div>
+    </section>
+
+    <footer><p>&copy; 2024 EcoTravel Girona.</p></footer>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+/* --- RESET I GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- CAPÇALERA I MENÚ --- */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Menú fix */
+    top: 0;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover, .menu a.actiu {
+    color: #27ae60;
+}
+
+/* --- HERO SECTION (PORTADA) --- */
+.hero {
+    height: 80vh;
+    /* CANVI IMPORTANT: Fons local */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/fons.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+/* --- BOTONS I CONTAINER --- */
+.btn {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover { background: #219150; }
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- TAULES (Rutes) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th { background-color: #2c3e50; color: white; }
+tr:hover { background-color: #f1f1f1; }
+
+/* --- GALERIA (Grid) --- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover { transform: scale(1.05); }
+
+/* --- FORMULARI --- */
+.form-wrapper {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* --- ESTILS NOUS PER A L'EQUIP (TARGETES) --- */
+.equip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-equip {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-equip:hover {
+    transform: translateY(-5px); 
+}
+
+.card-equip img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card-equip h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.card-equip .carrec {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+/* Mòbil */
+@media (max-width: 600px) {
+    header { flex-direction: column; }
+    .menu { flex-direction: column; gap: 10px; margin-top: 10px; text-align: center; }
+    .hero h1 { font-size: 2rem; }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+    .galeria { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Escriptori Gran */
+@media (min-width: 1200px) {
+    .container { max-width: 1400px; }
+}
